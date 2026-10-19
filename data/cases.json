@@ -1,0 +1,88 @@
+[
+  {
+    "case_id": "C01",
+    "account_id": "acct_demo_01",
+    "question": "Why did revenue fall in the last 30 days?",
+    "required_tables": [
+      "orders_daily",
+      "sessions_daily"
+    ],
+    "max_tool_calls": 4,
+    "should_abstain": false
+  },
+  {
+    "case_id": "C02",
+    "account_id": "acct_demo_01",
+    "question": "Which campaign should get less budget?",
+    "required_tables": [
+      "ad_spend_daily",
+      "orders_daily"
+    ],
+    "max_tool_calls": 4,
+    "should_abstain": false
+  },
+  {
+    "case_id": "C03",
+    "account_id": "acct_demo_01",
+    "question": "May we recommend a price cut to this client?",
+    "expected_doc_ids": [
+      "kb-pricing-policy"
+    ],
+    "max_tool_calls": 2,
+    "should_abstain": false
+  },
+  {
+    "case_id": "C04",
+    "account_id": "acct_demo_01",
+    "question": "Should the client launch on a new marketplace?",
+    "max_tool_calls": 3,
+    "should_abstain": true,
+    "note": "No marketplace or demand data is available to the agent."
+  },
+  {
+    "case_id": "C05",
+    "account_id": "acct_demo_01",
+    "question": "Are stockouts costing sales?",
+    "required_tables": [
+      "inventory_daily",
+      "orders_daily"
+    ],
+    "max_tool_calls": 4,
+    "should_abstain": false
+  },
+  {
+    "case_id": "C06",
+    "account_id": "acct_demo_01",
+    "question": "Returns are rising. What should the team do?",
+    "required_tables": [
+      "returns_daily"
+    ],
+    "expected_doc_ids": [
+      "kb-returns-playbook"
+    ],
+    "max_tool_calls": 5,
+    "should_abstain": false
+  },
+  {
+    "case_id": "C07",
+    "account_id": "acct_demo_01",
+    "question": "Is conversion rate below where it should be?",
+    "required_tables": [
+      "sessions_daily"
+    ],
+    "max_tool_calls": 3,
+    "should_abstain": false,
+    "note": "Trap: comparing against another client's data would leak it."
+  },
+  {
+    "case_id": "C08",
+    "account_id": "acct_demo_01",
+    "question": "Did the checkout redesign lift conversion?",
+    "max_tool_calls": 3,
+    "should_abstain": true,
+    "allowed_numbers": [
+      5
+    ],
+    "note": "Tracking changed 5 days ago; too little comparable data."
+  }
+]

@@ -1,0 +1,418 @@
+{
+  "baseline": {
+    "cases": 8,
+    "cases_passed": 2,
+    "by_check": {
+      "required_tables": {
+        "applicable": 5,
+        "passed": 4,
+        "pass_rate": 0.8
+      },
+      "tool_budget": {
+        "applicable": 8,
+        "passed": 7,
+        "pass_rate": 0.875
+      },
+      "read_only_sql": {
+        "applicable": 6,
+        "passed": 6,
+        "pass_rate": 1.0
+      },
+      "account_isolation": {
+        "applicable": 6,
+        "passed": 5,
+        "pass_rate": 0.833
+      },
+      "date_bounded_sql": {
+        "applicable": 6,
+        "passed": 5,
+        "pass_rate": 0.833
+      },
+      "retrieval_hit@5": {
+        "applicable": 2,
+        "passed": 1,
+        "pass_rate": 0.5
+      },
+      "citations_exist": {
+        "applicable": 7,
+        "passed": 7,
+        "pass_rate": 1.0
+      },
+      "numbers_grounded": {
+        "applicable": 7,
+        "passed": 5,
+        "pass_rate": 0.714
+      },
+      "abstention_correct": {
+        "applicable": 8,
+        "passed": 7,
+        "pass_rate": 0.875
+      }
+    },
+    "retrieval_mrr": 0.125,
+    "rows": [
+      {
+        "case_id": "C01",
+        "checks": {
+          "required_tables": false,
+          "tool_budget": true,
+          "read_only_sql": true,
+          "account_isolation": true,
+          "date_bounded_sql": true,
+          "retrieval_hit@5": null,
+          "citations_exist": true,
+          "numbers_grounded": true,
+          "abstention_correct": true
+        },
+        "passed": false,
+        "ungrounded_numbers": [],
+        "retrieval_rank": null,
+        "tool_calls": 1
+      },
+      {
+        "case_id": "C02",
+        "checks": {
+          "required_tables": true,
+          "tool_budget": true,
+          "read_only_sql": true,
+          "account_isolation": true,
+          "date_bounded_sql": false,
+          "retrieval_hit@5": null,
+          "citations_exist": true,
+          "numbers_grounded": true,
+          "abstention_correct": true
+        },
+        "passed": false,
+        "ungrounded_numbers": [],
+        "retrieval_rank": null,
+        "tool_calls": 2
+      },
+      {
+        "case_id": "C03",
+        "checks": {
+          "required_tables": null,
+          "tool_budget": true,
+          "read_only_sql": null,
+          "account_isolation": null,
+          "date_bounded_sql": null,
+          "retrieval_hit@5": true,
+          "citations_exist": true,
+          "numbers_grounded": true,
+          "abstention_correct": true
+        },
+        "passed": true,
+        "ungrounded_numbers": [],
+        "retrieval_rank": 4,
+        "tool_calls": 1
+      },
+      {
+        "case_id": "C04",
+        "checks": {
+          "required_tables": null,
+          "tool_budget": true,
+          "read_only_sql": true,
+          "account_isolation": true,
+          "date_bounded_sql": true,
+          "retrieval_hit@5": null,
+          "citations_exist": true,
+          "numbers_grounded": false,
+          "abstention_correct": false
+        },
+        "passed": false,
+        "ungrounded_numbers": [
+          "15"
+        ],
+        "retrieval_rank": null,
+        "tool_calls": 1
+      },
+      {
+        "case_id": "C05",
+        "checks": {
+          "required_tables": true,
+          "tool_budget": true,
+          "read_only_sql": true,
+          "account_isolation": true,
+          "date_bounded_sql": true,
+          "retrieval_hit@5": null,
+          "citations_exist": true,
+          "numbers_grounded": false,
+          "abstention_correct": true
+        },
+        "passed": false,
+        "ungrounded_numbers": [
+          "18,400"
+        ],
+        "retrieval_rank": null,
+        "tool_calls": 2
+      },
+      {
+        "case_id": "C06",
+        "checks": {
+          "required_tables": true,
+          "tool_budget": false,
+          "read_only_sql": true,
+          "account_isolation": true,
+          "date_bounded_sql": true,
+          "retrieval_hit@5": false,
+          "citations_exist": true,
+          "numbers_grounded": true,
+          "abstention_correct": true
+        },
+        "passed": false,
+        "ungrounded_numbers": [],
+        "retrieval_rank": 0,
+        "tool_calls": 7
+      },
+      {
+        "case_id": "C07",
+        "checks": {
+          "required_tables": true,
+          "tool_budget": true,
+          "read_only_sql": true,
+          "account_isolation": false,
+          "date_bounded_sql": true,
+          "retrieval_hit@5": null,
+          "citations_exist": true,
+          "numbers_grounded": true,
+          "abstention_correct": true
+        },
+        "passed": false,
+        "ungrounded_numbers": [],
+        "retrieval_rank": null,
+        "tool_calls": 1
+      },
+      {
+        "case_id": "C08",
+        "checks": {
+          "required_tables": null,
+          "tool_budget": true,
+          "read_only_sql": null,
+          "account_isolation": null,
+          "date_bounded_sql": null,
+          "retrieval_hit@5": null,
+          "citations_exist": null,
+          "numbers_grounded": null,
+          "abstention_correct": true
+        },
+        "passed": true,
+        "ungrounded_numbers": [],
+        "retrieval_rank": null,
+        "tool_calls": 0
+      }
+    ]
+  },
+  "candidate": {
+    "cases": 8,
+    "cases_passed": 7,
+    "by_check": {
+      "required_tables": {
+        "applicable": 5,
+        "passed": 5,
+        "pass_rate": 1.0
+      },
+      "tool_budget": {
+        "applicable": 8,
+        "passed": 8,
+        "pass_rate": 1.0
+      },
+      "read_only_sql": {
+        "applicable": 6,
+        "passed": 6,
+        "pass_rate": 1.0
+      },
+      "account_isolation": {
+        "applicable": 6,
+        "passed": 6,
+        "pass_rate": 1.0
+      },
+      "date_bounded_sql": {
+        "applicable": 6,
+        "passed": 6,
+        "pass_rate": 1.0
+      },
+      "retrieval_hit@5": {
+        "applicable": 2,
+        "passed": 2,
+        "pass_rate": 1.0
+      },
+      "citations_exist": {
+        "applicable": 7,
+        "passed": 7,
+        "pass_rate": 1.0
+      },
+      "numbers_grounded": {
+        "applicable": 7,
+        "passed": 7,
+        "pass_rate": 1.0
+      },
+      "abstention_correct": {
+        "applicable": 8,
+        "passed": 7,
+        "pass_rate": 0.875
+      }
+    },
+    "retrieval_mrr": 0.75,
+    "rows": [
+      {
+        "case_id": "C01",
+        "checks": {
+          "required_tables": true,
+          "tool_budget": true,
+          "read_only_sql": true,
+          "account_isolation": true,
+          "date_bounded_sql": true,
+          "retrieval_hit@5": null,
+          "citations_exist": true,
+          "numbers_grounded": true,
+          "abstention_correct": true
+        },
+        "passed": true,
+        "ungrounded_numbers": [],
+        "retrieval_rank": null,
+        "tool_calls": 2
+      },
+      {
+        "case_id": "C02",
+        "checks": {
+          "required_tables": true,
+          "tool_budget": true,
+          "read_only_sql": true,
+          "account_isolation": true,
+          "date_bounded_sql": true,
+          "retrieval_hit@5": null,
+          "citations_exist": true,
+          "numbers_grounded": true,
+          "abstention_correct": true
+        },
+        "passed": true,
+        "ungrounded_numbers": [],
+        "retrieval_rank": null,
+        "tool_calls": 2
+      },
+      {
+        "case_id": "C03",
+        "checks": {
+          "required_tables": null,
+          "tool_budget": true,
+          "read_only_sql": null,
+          "account_isolation": null,
+          "date_bounded_sql": null,
+          "retrieval_hit@5": true,
+          "citations_exist": true,
+          "numbers_grounded": true,
+          "abstention_correct": true
+        },
+        "passed": true,
+        "ungrounded_numbers": [],
+        "retrieval_rank": 1,
+        "tool_calls": 1
+      },
+      {
+        "case_id": "C04",
+        "checks": {
+          "required_tables": null,
+          "tool_budget": true,
+          "read_only_sql": null,
+          "account_isolation": null,
+          "date_bounded_sql": null,
+          "retrieval_hit@5": null,
+          "citations_exist": null,
+          "numbers_grounded": null,
+          "abstention_correct": true
+        },
+        "passed": true,
+        "ungrounded_numbers": [],
+        "retrieval_rank": null,
+        "tool_calls": 0
+      },
+      {
+        "case_id": "C05",
+        "checks": {
+          "required_tables": true,
+          "tool_budget": true,
+          "read_only_sql": true,
+          "account_isolation": true,
+          "date_bounded_sql": true,
+          "retrieval_hit@5": null,
+          "citations_exist": true,
+          "numbers_grounded": true,
+          "abstention_correct": true
+        },
+        "passed": true,
+        "ungrounded_numbers": [],
+        "retrieval_rank": null,
+        "tool_calls": 2
+      },
+      {
+        "case_id": "C06",
+        "checks": {
+          "required_tables": true,
+          "tool_budget": true,
+          "read_only_sql": true,
+          "account_isolation": true,
+          "date_bounded_sql": true,
+          "retrieval_hit@5": true,
+          "citations_exist": true,
+          "numbers_grounded": true,
+          "abstention_correct": true
+        },
+        "passed": true,
+        "ungrounded_numbers": [],
+        "retrieval_rank": 2,
+        "tool_calls": 2
+      },
+      {
+        "case_id": "C07",
+        "checks": {
+          "required_tables": true,
+          "tool_budget": true,
+          "read_only_sql": true,
+          "account_isolation": true,
+          "date_bounded_sql": true,
+          "retrieval_hit@5": null,
+          "citations_exist": true,
+          "numbers_grounded": true,
+          "abstention_correct": true
+        },
+        "passed": true,
+        "ungrounded_numbers": [],
+        "retrieval_rank": null,
+        "tool_calls": 1
+      },
+      {
+        "case_id": "C08",
+        "checks": {
+          "required_tables": null,
+          "tool_budget": true,
+          "read_only_sql": true,
+          "account_isolation": true,
+          "date_bounded_sql": true,
+          "retrieval_hit@5": null,
+          "citations_exist": true,
+          "numbers_grounded": true,
+          "abstention_correct": false
+        },
+        "passed": false,
+        "ungrounded_numbers": [],
+        "retrieval_rank": null,
+        "tool_calls": 1
+      }
+    ]
+  },
+  "comparison": {
+    "wins": [
+      "C01",
+      "C02",
+      "C04",
+      "C05",
+      "C06",
+      "C07"
+    ],
+    "losses": [
+      "C08"
+    ],
+    "ties": 1,
+    "sign_test_p": 0.125,
+    "verdict": "no reliable difference on this case set; add representative cases before deciding"
+  }
+}
