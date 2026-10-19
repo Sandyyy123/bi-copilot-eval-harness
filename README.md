@@ -1,6 +1,6 @@
 > **Proprietary - All Rights Reserved.** Licensed to Sandeep Grover. No reuse, copying, modification, or distribution without prior written permission. See LICENSE.
 
-# bi-agent-eval-harness
+# bi-copilot-eval-harness
 
 A small, runnable sample of a repeatable evaluation for a business-intelligence agent: an
 assistant that investigates a client account by querying a data warehouse (for example
